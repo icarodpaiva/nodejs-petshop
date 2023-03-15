@@ -8,15 +8,17 @@
     <link rel="icon" type="image/png" href="/images/favicon.png" />
   </head>
   <body>
-    {{>partials/header}}
+    {{ >partials/header }}
 
+    {{ #banner }}
     <section
       class="banner"
-      style="background-image: url('/images/allanimals.jpg')"
+      style="background-image: url('/images/{{ background }}')"
     >
-      Todos os animais
+      {{ title }}
     </section>
-    <h2>Todos os animais disponíveis para adoção</h2>
+    <h2>{{ title }} disponíveis para adoção</h2>
+    {{ /banner }}
 
     <div class="container list">
       <div class="item">
@@ -27,6 +29,6 @@
       </div>
     </div>
 
-    {{>partials/footer}}
+    {{ >partials/footer }}
   </body>
 </html>
