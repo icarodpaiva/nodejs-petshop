@@ -20,7 +20,7 @@ server.use((_, res) => {
   res.render('pages/404')
 })
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT ?? 3000
 server.listen(PORT, () => {
   console.log(`Server listening in http://localhost:${PORT}`)
 })
